@@ -36,6 +36,7 @@ a:hover {
 
 .parent {
   height: 100vh;
+  width: 100%;
   background-image: url('../img/IMG_6940.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -143,6 +144,7 @@ li:first-child{
 }
 
 footer {
+  width: 100%;
   background-color: rgb(6,39,66);
   color: white;
   text-align: center;
@@ -214,7 +216,25 @@ footer {
   .hamburger:hover .pate::after {
     transform: rotate(-45deg) translate(7px, -8px);
   }
+  
+  .content {
+    width: 100%;
+  }
 
+  header {
+    width: 100%;
+  }
 
+  .header img {
+    width: 150px;
+  }
+
+  ul {
+    width: 100%;
+  }
+
+  iframe {
+    width: 100%;
+  }
 
 }
