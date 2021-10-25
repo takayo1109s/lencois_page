@@ -1,0 +1,220 @@
+header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 1.6cm;
+  position: fixed;
+  z-index: 1;
+}
+
+.header img {
+  width: 330px;
+  height: 60px;
+  margin-left: 30px;
+}
+
+.header-right {
+  font-size: 20px;
+  font-family: 'Andada Pro', serif;
+  margin-top: 20px;
+  margin-left: 200px;
+}
+
+a {
+  color: rgba(0, 0, 0, 0.637);
+  text-decoration: none;
+}
+
+a:hover {
+  /* font-size: 1.5em; */
+  font-weight: bold;
+}
+
+
+
+
+.parent {
+  height: 100vh;
+  background-image: url('/Users/takayosumi/Desktop/nexseed/LencoisMaranhenses/img/IMG_6940.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-family: serif;
+}
+
+.title {
+  font-size: 130px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 60px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 700px;
+  margin: auto;
+  margin-top: 70px;
+  font-family: 'Andada Pro', serif;
+}
+
+h2 {
+  font-size: 35px;
+  padding-top: 80px;
+  /* padding-bottom: 30px; */
+  position: relative;
+  padding: 1.5rem 1rem;
+}
+
+h2:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  content: '';
+  background-image: -webkit-repeating-linear-gradient(135deg, rgb(58, 122, 206), rgb(58, 122, 206) 1px, transparent 2px, transparent 5px);
+  background-image: repeating-linear-gradient(-45deg, rgb(58, 122, 206), rgb(58, 122, 206) 1px, transparent 2px, transparent 5px);
+  background-size: 7px 7px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+p {
+  font-size: 20px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.content img {
+  padding-bottom: 30px;
+  width: 700px;
+  height: 500px;
+}
+
+
+/* 写真 */
+ul{
+  width: 700px;
+  height: 500px;
+  padding-bottom: 30px;
+  list-style: none;
+  position: relative;
+}
+
+li{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+li{
+  animation: slide 14s infinite;/* (a+b)×c=x */
+  opacity: 0;
+}
+@keyframes slide{
+  0%{opacity: 0;}
+  3.5%{opacity: 1;z-index: 1;}/* b÷x×100=y */
+  25%{opacity: 1;}/* 100÷c=z */
+  28.5%{opacity: 0;z-index: 0;}/* y+z */
+}
+ul:hover li{
+  animation-play-state:paused;/* マウスを載せると一時停止 */
+}
+li:first-child{
+  position:relative;
+}
+
+footer {
+  background-color: rgb(6,39,66);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+  margin-top: 100px;
+}
+
+
+@media screen and (max-width: 780px) {
+  .title {
+    font-size: 60px;
+  }
+
+  .subtitle {
+    font-size: 30px;
+  }
+  
+  .header-right {
+    display: none;
+  }
+
+  .hamburger {
+    width: 28px;
+    height: 30px;
+    margin-top: 15px;
+    margin-right: 30px;
+  }
+
+  .hamburger .pate,
+  .hamburger .pate::before,
+  .hamburger .pate::after {
+    width: 100%;
+    height: 5px;
+    background-color: rgba(128, 128, 128, 0.678);
+    border-radius: 1.5px;
+    display: block;
+    transition: all .5s ease;
+  }
+
+  .hamburger .pate {
+    position: relative;
+    top: calc(50% - 3px);
+  }
+
+  .hamburger .pate::before,
+  .hamburger .pate::after {
+    content: '';
+    position: absolute;
+  }
+
+  .hamburger .pate::before {
+    top: -9px;
+  }
+
+  .hamburger .pate::after {
+    top: 9px;
+  }
+
+  .hamburger:hover .pate {
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .hamburger:hover .pate::before {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger:hover .pate::after {
+    transform: rotate(-45deg) translate(7px, -8px);
+  }
+
+
+
+}
