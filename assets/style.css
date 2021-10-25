@@ -36,7 +36,7 @@ a:hover {
 
 .parent {
   height: 100vh;
-  background-image: url('/Users/takayosumi/Desktop/nexseed/LencoisMaranhenses/img/IMG_6940.jpg');
+  background-image: url('../img/IMG_6940.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
